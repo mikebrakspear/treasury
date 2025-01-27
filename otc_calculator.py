@@ -18,16 +18,17 @@ settlement_amount = price_offered * btc_quantity
 
 # Display Results
 st.write("### Results:")
-st.write(f"**Input BTC Market Price:** ${btc_market_price:,.2f} USD")
+st.write(f"**Input BTC Market Price:** {btc_market_price:,.2f} USD")
 st.write(f"**Input BTC Quantity:** {btc_quantity:.6f}")
 st.write(f"**Input Spread (%):** {spread_percentage:.2f}")
 st.write(f"**Selected Settlement Currency:** {settlement_currency}")
-st.write(f"**Price Offered to Customer:** ${price_offered:,.2f} {settlement_currency}")
+st.write(f"**Price Offered to Customer:** {price_offered:,.2f} {settlement_currency}")
 st.write(f"**Settlement Amount:** {settlement_amount:,.2f} {settlement_currency}")
 
 # Final Output Message
 if settlement_currency:
     st.write(
-        f"Xapo can pay **${price_offered:,.2f} {settlement_currency}** on **{btc_quantity:.6f} BTC**, "
-        f"for a total of **{settlement_amount:,.2f} {settlement_currency}**."
+        f"Xapo can pay **{price_offered:,.2f} {settlement_currency}** on **{btc_quantity:.6f} BTC**, "
+        f"for a total of **{settlement_amount:,.2f} {settlement_currency}**. "
+        f"Please confirm if you accept the quote."
     )
